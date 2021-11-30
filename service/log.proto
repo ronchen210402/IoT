@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service LogSaver {
+    rpc getLogs(LogRequest) returns (LogResponse);
+}
+
+message LogRequest {
+    int64 ask_logs = 1;
+}
+
+message LogResponse {
+    repeated int64 logs = 1;
+}
