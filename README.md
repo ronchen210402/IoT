@@ -1,10 +1,4 @@
 ## To compile
-```bash
-> make
-```
-
-## To run
-### preprocess
 - Install project dependencies
 ```bash
 $ pip3 install -r requirements.txt
@@ -15,7 +9,12 @@ $ sudo apt-get install protobuf-compiler
 $ cd mysite/
 $ python3 manage.py migrate
 ```
+- Make pb2
+```bash
+$ make
+```
 
+## To run
 ### start Message Broker
 ```bash
 $ sudo docker run -d -it -p 1883:1883 -v $(pwd)/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto
